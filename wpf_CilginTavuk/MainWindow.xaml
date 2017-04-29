@@ -1,0 +1,171 @@
+﻿<Controls:MetroWindow x:Class="wpf_CilginTavuk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_CilginTavuk"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Çılgın Tavuklar BOT" Width="917" Height="621"
+                      
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+
+                      WindowStartupLocation="CenterScreen" Icon="user2-160x160.jpg" ResizeMode="CanMinimize">
+    <Grid x:Name="MainGrid">
+        <GroupBox x:Name="groupBoxGiriş" Header="Giriş" Margin="10,10,0,0" HorizontalAlignment="Left" Width="175.333" Controls:ControlsHelper.ContentCharacterCasing="Normal" BorderThickness="1" Background="#CC119EDA" SnapsToDevicePixels="False" Height="149.333" VerticalAlignment="Top">
+            <Grid>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top" Margin="0,4,0,0"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Şifre:" Margin="0,37,0,47" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBox x:Name="tbxUsername" Margin="34.667,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Text="eroglu94"/>
+                <TextBox x:Name="tbxPassword" Height="26" Margin="34.667,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="8874788474a"/>
+                <Button x:Name="btnLogin" Content="Giriş" Height="29.374" Margin="0,79.626,0,0" VerticalAlignment="Top" Click="btnLogin_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxBilgiler" Header="Bilgiler" Margin="215.332,10,344.335,0" Controls:ControlsHelper.ContentCharacterCasing="Normal" Height="149.333" VerticalAlignment="Top" SnapsToDevicePixels="False">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="Akçe" Margin="0,0,11.167,6">
+                    <Rectangle Fill="#FF00C0EF" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="Akçe_Bakiye" TextWrapping="Wrap" Text="Akçe Bakiye" Foreground="White" HorizontalAlignment="Left" Margin="10,4.06,0,17.98" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblBakiye" Text="0" Foreground="White" Margin="0,0,0,8.94" VerticalAlignment="Bottom" FontSize="18" HorizontalAlignment="Right" UseLayoutRounding="False" Width="71.583" FontWeight="Bold" TextWrapping="Wrap"/>
+                </Grid>
+                <Grid x:Name="Yumurta" Background="Black" Margin="11.167,0,0,6" Grid.Column="1">
+                    <Rectangle Fill="#FF00A65A" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="Yumurta" Foreground="White" HorizontalAlignment="Left" Margin="10,4.06,0,17.98" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblYumurta" TextWrapping="Wrap" Text="0" Foreground="White" Margin="0,0,0,8.94" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="18" HorizontalAlignment="Right" UseLayoutRounding="False" Width="71.583"/>
+                </Grid>
+                <Grid x:Name="Yem_Masraf" Background="Black" Margin="0,6,11.167,0" Grid.Row="1">
+                    <Rectangle Fill="#FFF39C12" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Yem Masraf" Foreground="White" HorizontalAlignment="Left" Margin="10,4.06,0,17.98" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblYemMasraf" TextWrapping="Wrap" Text="0" Foreground="White" Margin="0,0,0,8.94" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="18" HorizontalAlignment="Right" UseLayoutRounding="False" Width="71.583"/>
+                </Grid>
+                <Grid x:Name="TL_Bakiye" Background="Black" Margin="11.167,6,0,0" Grid.Column="1" Grid.Row="1">
+                    <Rectangle Fill="#FF605CA8" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="TL Bakiye" Foreground="White" HorizontalAlignment="Left" Margin="10,4.06,0,17.98" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblTLBakiye" TextWrapping="Wrap" Text="0" Foreground="White" Margin="0,0,0,8.94" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="18" HorizontalAlignment="Right" UseLayoutRounding="False" Width="71.583"/>
+                </Grid>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxKumes" Header="Kümes" HorizontalAlignment="Left" Margin="10,181,0,20" Width="375" Controls:ControlsHelper.ContentCharacterCasing="Normal">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="Tavuk_1">
+                    <Rectangle Fill="#FF00A65A" Margin="5" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="lblTavuk1_isim" TextWrapping="Wrap" Text="Tavuk ismi" VerticalAlignment="Top" Margin="10,10,10,0" Foreground="White" FontSize="15" FontWeight="Bold"/>
+                    <TextBlock x:Name="lblTavuk1_Copy" TextWrapping="Wrap" Text="Saatlik Yumurta:" VerticalAlignment="Top" Margin="10,34.95,82.5,0" Foreground="White"/>
+                    <TextBlock x:Name="lblTavuk1_Copy1" TextWrapping="Wrap" Text="Fiyat:" Margin="10,55.91,0,45.462" Foreground="White" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="29"/>
+                    <TextBlock x:Name="lblTavuk1_Copy2" TextWrapping="Wrap" Margin="10,0,0,24.5" Foreground="White" VerticalAlignment="Bottom" Text="Adet:" HorizontalAlignment="Left" Width="29"/>
+                    <Button x:Name="btnTavuk1_SatınAl" Content="Satın Al" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="62.5" Margin="0,0,10,10" Height="21.333" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk1_SaatlikYumurta" TextWrapping="Wrap" Text="0" Margin="0,34.95,10,0" Foreground="White" HorizontalAlignment="Right" Width="67.5" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk1_Fiyat" TextWrapping="Wrap" Text="0" Margin="44,55.911,67.5,45.46" Foreground="White" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblTavuk1_Adet" TextWrapping="Wrap" Text="0" Margin="44,0,72.5,24.495" Foreground="White" VerticalAlignment="Bottom"/>
+                </Grid>
+                <Grid x:Name="Tavuk_2" Grid.Column="1">
+                    <Rectangle Fill="#FF00A65A" Margin="5" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="lblTavuk2_isim" TextWrapping="Wrap" Text="Tavuk ismi" VerticalAlignment="Top" Margin="10,10,10,0" Foreground="White" FontSize="15" FontWeight="Bold"/>
+                    <TextBlock x:Name="lblTavuk1_Copy3" TextWrapping="Wrap" Text="Saatlik Yumurta:" VerticalAlignment="Top" Margin="10,34.95,82.5,0" Foreground="White"/>
+                    <TextBlock x:Name="lblTavuk1_Copy4" TextWrapping="Wrap" Text="Fiyat:" Margin="10,55.91,0,45.462" Foreground="White" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="29"/>
+                    <TextBlock x:Name="lblTavuk1_Copy5" TextWrapping="Wrap" Margin="10,0,0,24.5" Foreground="White" VerticalAlignment="Bottom" Text="Adet:" HorizontalAlignment="Left" Width="29"/>
+                    <Button x:Name="btnTavuk2_SatınAl" Content="Satın Al" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="62.5" Margin="0,0,10,10" Height="21.333" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk2_SaatlikYumurta" TextWrapping="Wrap" Text="0" Margin="0,34.95,10,0" Foreground="White" HorizontalAlignment="Right" Width="67.5" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk2_Fiyat" TextWrapping="Wrap" Text="0" Margin="44,55.911,67.5,45.46" Foreground="White" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblTavuk2_Adet" TextWrapping="Wrap" Text="0" Margin="44,0,72.5,24.495" Foreground="White" VerticalAlignment="Bottom"/>
+                </Grid>
+                <Grid x:Name="Tavuk_3" Grid.Row="1">
+                    <Rectangle Fill="#FF00A65A" Margin="5" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="lblTavuk3_isim" TextWrapping="Wrap" Text="Tavuk ismi" VerticalAlignment="Top" Margin="10,10,10,0" Foreground="White" FontSize="15" FontWeight="Bold"/>
+                    <TextBlock x:Name="lblTavuk1_Copy6" TextWrapping="Wrap" Text="Saatlik Yumurta:" VerticalAlignment="Top" Margin="10,34.95,82.5,0" Foreground="White"/>
+                    <TextBlock x:Name="lblTavuk1_Copy7" TextWrapping="Wrap" Text="Fiyat:" Margin="10,55.91,0,45.462" Foreground="White" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="29"/>
+                    <TextBlock x:Name="lblTavuk1_Copy8" TextWrapping="Wrap" Margin="10,0,0,24.5" Foreground="White" VerticalAlignment="Bottom" Text="Adet:" HorizontalAlignment="Left" Width="29"/>
+                    <Button x:Name="btnTavuk3_SatınAl" Content="Satın Al" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="62.5" Margin="0,0,10,10" Height="21.333" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk3_SaatlikYumurta" TextWrapping="Wrap" Text="0" Margin="0,34.95,10,0" Foreground="White" HorizontalAlignment="Right" Width="67.5" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk3_Fiyat" TextWrapping="Wrap" Text="0" Margin="44,55.911,67.5,45.46" Foreground="White" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblTavuk3_Adet" TextWrapping="Wrap" Text="0" Margin="44,0,72.5,24.495" Foreground="White" VerticalAlignment="Bottom"/>
+                </Grid>
+                <Grid x:Name="Tavuk_4" Grid.Column="1" Grid.Row="1">
+                    <Rectangle Fill="#FF00A65A" Margin="5" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="lblTavuk4_isim" TextWrapping="Wrap" Text="Tavuk ismi" VerticalAlignment="Top" Margin="10,10,10,0" Foreground="White" FontSize="15" FontWeight="Bold"/>
+                    <TextBlock x:Name="lblTavuk1_Copy9" TextWrapping="Wrap" Text="Saatlik Yumurta:" VerticalAlignment="Top" Margin="10,34.95,82.5,0" Foreground="White"/>
+                    <TextBlock x:Name="lblTavuk1_Copy10" TextWrapping="Wrap" Text="Fiyat:" Margin="10,55.91,0,45.462" Foreground="White" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="29"/>
+                    <TextBlock x:Name="lblTavuk1_Copy11" TextWrapping="Wrap" Margin="10,0,0,24.5" Foreground="White" VerticalAlignment="Bottom" Text="Adet:" HorizontalAlignment="Left" Width="29"/>
+                    <Button x:Name="btnTavuk4_SatınAl" Content="Satın Al" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="62.5" Margin="0,0,10,10" Height="21.333" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk4_SaatlikYumurta" TextWrapping="Wrap" Text="0" Margin="0,34.95,10,0" Foreground="White" HorizontalAlignment="Right" Width="67.5" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk4_Fiyat" TextWrapping="Wrap" Text="0" Margin="44,55.911,67.5,45.46" Foreground="White" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblTavuk4_Adet" TextWrapping="Wrap" Text="0" Margin="44,0,72.5,24.495" Foreground="White" VerticalAlignment="Bottom"/>
+                </Grid>
+                <Grid x:Name="Tavuk_5" Grid.Row="2">
+                    <Rectangle Fill="#FF00A65A" Margin="5" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="lblTavuk5_isim" TextWrapping="Wrap" Text="Tavuk ismi" VerticalAlignment="Top" Margin="10,10,10,0" Foreground="White" FontSize="15" FontWeight="Bold"/>
+                    <TextBlock x:Name="lblTavuk1_Copy12" TextWrapping="Wrap" Text="Saatlik Yumurta:" VerticalAlignment="Top" Margin="10,34.95,82.5,0" Foreground="White"/>
+                    <TextBlock x:Name="lblTavuk1_Copy13" TextWrapping="Wrap" Text="Fiyat:" Margin="10,55.91,0,45.462" Foreground="White" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="29"/>
+                    <TextBlock x:Name="lblTavuk1_Copy14" TextWrapping="Wrap" Margin="10,0,0,24.5" Foreground="White" VerticalAlignment="Bottom" Text="Adet:" HorizontalAlignment="Left" Width="29"/>
+                    <Button x:Name="btnTavuk5_SatınAl" Content="Satın Al" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="62.5" Margin="0,0,10,10" Height="21.333" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk5_SaatlikYumurta" TextWrapping="Wrap" Text="0" Margin="0,34.95,10,0" Foreground="White" HorizontalAlignment="Right" Width="67.5" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk5_Fiyat" TextWrapping="Wrap" Text="0" Margin="44,55.911,67.5,45.46" Foreground="White" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblTavuk5_Adet" TextWrapping="Wrap" Text="0" Margin="44,0,72.5,24.495" Foreground="White" VerticalAlignment="Bottom"/>
+                </Grid>
+                <Grid x:Name="Tavuk_6" Grid.Row="2" Grid.Column="1">
+                    <Rectangle Fill="#FF00A65A" Margin="5" Stroke="Black" StrokeThickness="0"/>
+                    <TextBlock x:Name="lblTavuk6_isim" TextWrapping="Wrap" Text="Tavuk ismi" VerticalAlignment="Top" Margin="10,10,10,0" Foreground="White" FontSize="15" FontWeight="Bold"/>
+                    <TextBlock x:Name="lblTavuk1_Copy15" TextWrapping="Wrap" Text="Saatlik Yumurta:" VerticalAlignment="Top" Margin="10,34.95,82.5,0" Foreground="White"/>
+                    <TextBlock x:Name="lblTavuk1_Copy16" TextWrapping="Wrap" Text="Fiyat:" Margin="10,55.91,0,45.462" Foreground="White" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="29"/>
+                    <TextBlock x:Name="lblTavuk1_Copy17" TextWrapping="Wrap" Margin="10,0,0,24.5" Foreground="White" VerticalAlignment="Bottom" Text="Adet:" HorizontalAlignment="Left" Width="29"/>
+                    <Button x:Name="btnTavuk6_SatınAl" Content="Satın Al" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="62.5" Margin="0,0,10,10" Height="21.333" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk6_SaatlikYumurta" TextWrapping="Wrap" Text="0" Margin="0,34.95,10,0" Foreground="White" HorizontalAlignment="Right" Width="67.5" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="lblTavuk6_Fiyat" TextWrapping="Wrap" Text="0" Margin="44,55.911,67.5,45.46" Foreground="White" d:LayoutOverrides="Height"/>
+                    <TextBlock x:Name="lblTavuk6_Adet" TextWrapping="Wrap" Text="0" Margin="44,0,72.5,24.495" Foreground="White" VerticalAlignment="Bottom"/>
+                </Grid>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxLog" Header="Log" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Height="149.333" Width="306" Controls:ControlsHelper.ContentCharacterCasing="Normal">
+            <RichTextBox x:Name="tbxLOG" Margin="-5,-5,-4.5,-5" BorderThickness="0" IsUndoEnabled="False" UseLayoutRounding="False" FontSize="11" Block.LineHeight="2" VerticalScrollBarVisibility="Auto"/>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxİstatistik" Header="İstatistikler" Margin="411,181,10,207" Controls:ControlsHelper.ContentCharacterCasing="Normal">
+            <Grid>
+                <WebBrowser x:Name="webbrowser1" Navigated="webbrowser1_Navigated" Margin="-417,-212,599,199" Visibility="Hidden"
+                            />
+                <WebBrowser x:Name="wb2" HorizontalAlignment="Left" Height="115" Margin="0,50,0,0" VerticalAlignment="Top" Width="478" Navigated="wb2_Navigated" Source="http://127.0.0.1/gsa_test.gsa" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxBonus" Header="Bonus" Margin="411,0,306,20" VerticalAlignment="Bottom" Height="182" Controls:ControlsHelper.ContentCharacterCasing="Normal">
+            <Grid>
+                <Button x:Name="btnKazan" Click="btnKazan_Click" Content="Kazan" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75"/>
+                <TextBox x:Name="tbxKod" Height="23" TextWrapping="Wrap" Margin="10,66,10,51" Controls:TextBoxHelper.Watermark="Kodu Giriniz"/>
+                <Image x:Name="imgKod" Margin="10,10,10,0" Height="46.62" VerticalAlignment="Top"/>
+                <Controls:ToggleSwitch x:Name="toggleBonus" Content="Auto" Margin="82,0,0,0.983" VerticalAlignment="Bottom" Height="30" Width="100" FontSize="12" IsCheckedChanged="toggleBonus_IsCheckedChanged"/>
+                <Label x:Name="lblBonusDispatcher" Content="Label" HorizontalAlignment="Left" Margin="144,92,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxBot" Header="Bot" HorizontalAlignment="Right" Margin="0,0,10,20" VerticalAlignment="Bottom" Height="182" Width="275" Controls:ControlsHelper.ContentCharacterCasing="Normal">
+            <Grid>
+                <Controls:ToggleSwitch x:Name="toggleAutoMod" Content="Auto Mod" Margin="123,0,0,0" Height="38" VerticalAlignment="Bottom" IsCheckedChanged="toggleAutoMod_IsCheckedChanged"/>
+                <Button x:Name="btnYumurtaSat" Click="btnYumurtaSat_Click" Content="Yumurtaları Sat" Margin="0,71.38,5,43" d:LayoutOverrides="Height" HorizontalAlignment="Right" Width="123"/>
+                <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" Height="17" Text="Güncelleme Sıklığı:&#xD;&#xA;" Margin="0,5,0,0"/>
+                <ComboBox x:Name="comboBoxinterval" Margin="108,0,35,0" VerticalAlignment="Top" Controls:TextBoxHelper.Watermark="Seçiniz" SelectionChanged="comboBoxinterval_SelectionChanged">
+                    <ComboBoxItem Content="1 Dakika"/>
+                    <ComboBoxItem Content="2 Dakika"/>
+                    <ComboBoxItem Content="5 Dakika"/>
+                    <ComboBoxItem Content="10 Dakika"/>
+                    <ComboBoxItem Content="30 Dakika"/>
+                </ComboBox>
+                <Button x:Name="btnWBGiris" Click="btnWBGiris_Click" Content="WBGiriş" HorizontalAlignment="Left" Width="75" Margin="55,71.38,0,43" d:LayoutOverrides="Height"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="button" Click="button_Click" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="69,0,0,0"/>
+    </Grid>
+</Controls:MetroWindow>
